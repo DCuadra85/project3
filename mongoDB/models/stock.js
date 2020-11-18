@@ -16,6 +16,6 @@ const stocksSchema = new Schema({
   adj_volume: String
 });
 
-const Stock = mongoose.model("Stock", stockSchema);
+const Stocks = mongoose.model("Stocks", stockSchema);
 
-module.exports = Stock;
+module.exports = Stocks;
