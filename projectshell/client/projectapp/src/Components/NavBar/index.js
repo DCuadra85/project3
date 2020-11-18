@@ -3,8 +3,13 @@ import "./style.css";
 
 function Navbar() {
     return (
-        <nav>
+        <nav className="nav">
             <img></img>
+            <ul>
+                <li>My Watch List</li>
+                <li>My Stocks</li>
+                <li>Log Out</li>
+            </ul>
         </nav>
     );
 }
