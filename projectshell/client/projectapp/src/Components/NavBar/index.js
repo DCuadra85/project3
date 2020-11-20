@@ -8,10 +8,14 @@ function Navbar() {
             <img></img>
             <ul>
                 <li>
-                    <Link to="/watchlist">My Watch List</Link>
+                    <Link to="/mywatchlist">My Watch List</Link>
                 </li>
-                <li>My Stocks</li>
-                <li>Log Out</li>
+                <li>
+                    <Link to="/myinvestments">My Investments</Link>
+                </li>
+                <li>
+                    <Link to="/login">Log Out</Link>
+                </li>
             </ul>
         </nav>
     );
