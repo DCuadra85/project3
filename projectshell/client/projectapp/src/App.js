@@ -6,7 +6,7 @@ import MyInvestments from "./pages/myInvestments";
 // import axios from "axios"
 // import Card from "./Components/Card";
 // import List from "./Components/List";
-import Navbar from "./Components/Navbar"
+import Navbar from "./Components/NavBar"
 // import Footer from "./Components/Footer"
 
 
