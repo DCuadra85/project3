@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from "axios"
+import Card from "./Components/Card";
+import List from "./Components/List";
 
 const App = () => {
   const [data, setData] = useState({
@@ -20,13 +22,20 @@ const App = () => {
   }, []);
 
   return (
-    <ul>
+    <>
+    {/* <ul>
       {data.Open.map((item, index) =>
         <li key={index}>{JSON.stringify(item)}</li>
       )};
-
-    </ul>
+    </ul> */}
+    <List>
+      {data.Open.map(data => (
+        <Card key={data._id} item={data}/>  
+      ))}
+    </List>
+    </>
   );
+  
 }
 
 export default App;
