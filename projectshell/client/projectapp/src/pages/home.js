@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        "http://api.marketstack.com/v1/eod?access_key=b608ad8d8dd43d4f4f352cb5e3d5d84a&symbols=AAPL",
+        "http://api.marketstack.com/v1/tickers?access_key=b228c703a0f40145978c32c631031281&limit=2",
       );
       console.log(result.data.data)
 
