@@ -1,41 +1,34 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
-import axios from "axios"
-import Card from "./Components/Card";
-import List from "./Components/List";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/home"
+// import axios from "axios"
+// import Card from "./Components/Card";
+// import List from "./Components/List";
+import Navbar from "./Components/Navbar"
+// import Footer from "./Components/Footer"
 
-const App = () => {
-  const [data, setData] = useState({
-    Open: []
-  })
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        "http://api.marketstack.com/v1/eod?access_key=b608ad8d8dd43d4f4f352cb5e3d5d84a&symbols=AAPL",
-      );
-      console.log(result.data.data)
+// after successful log in
+function App(){
+    return(
+      <>
+        <div>
+          <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path={["/", "/home"]}>
+              <Home />
+            </Route>
+          </Switch>
 
-      setData({ Open: result.data.data });
-    };
-    fetchData();
-  }, []);
+          </Router>
 
-  return (
-    <>
-    {/* <ul>
-      {data.Open.map((item, index) =>
-        <li key={index}>{JSON.stringify(item)}</li>
-      )};
-    </ul> */}
-    <List>
-      {data.Open.map(data => (
-        <Card key={data._id} item={data}/>  
-      ))}
-    </List>
-    </>
-  );
-  
+        {/* <Navbar />
+        <Jumbotron />
+        <Footer /> */}
+        </div>
+        </>
+    );
 }
 
 export default App;
