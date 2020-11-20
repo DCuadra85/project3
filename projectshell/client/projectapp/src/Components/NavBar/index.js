@@ -7,15 +7,21 @@ function Navbar() {
         <nav className="nav">
             <img></img>
             <ul>
-                <li>
-                    <Link to="/mywatchlist">My Watch List</Link>
+
+                <li className="nav-item">
+                    <Link to="/home">Current Stocks</Link>
                 </li>
-                <li>
-                    <Link to="/myinvestments">My Investments</Link>
+                <li className="nav-item">
+                    <Link to="/watchlist">My Watch List</Link>
                 </li>
-                <li>
-                    <Link to="/login">Log Out</Link>
+                <li className="nav-item">
+                    <Link to="/myinvestments">My Stocks</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="watchlist">Stock Watchlist</Link>
+                </li>
+                <li>Log Out</li>
+
             </ul>
         </nav>
     );
