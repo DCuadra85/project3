@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from "react";
-import DeleteBtn from "../Components";
-import Navbar from "..Components/Navbar";
+import React from "react";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
-function watchList(props) {
+function WatchList(props) {
 
 
     return (
         <>
         <Navbar />
+
+
+
+        <Footer />
         </>
 
     );
 
 }
 
-export default watchList;
+export default WatchList;
