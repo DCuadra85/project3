@@ -1,17 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
-import Navbar from "../Components/NavBar";
 
-function watchList(props) {
+function WatchList(props) {
 
 
     return (
         <>
         <Navbar />
+
+
+
+        <Footer />
         </>
 
     );
 
 }
 
-export default watchList;
+export default WatchList;
