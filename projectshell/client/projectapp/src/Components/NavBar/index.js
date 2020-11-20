@@ -14,7 +14,7 @@ function Navbar() {
                     <Link to="/myinvestments">My Investments</Link>
                 </li>
                 <li>
-                <Link to="/myinvestments">Log Out</Link>
+                    <Link to="/login">Log Out</Link>
                 </li>
             </ul>
         </nav>

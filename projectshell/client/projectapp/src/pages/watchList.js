@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../Components";
-import Navbar from "..Components/Navbar";
+
+import Navbar from "../Components/NavBar";
 
 function watchList(props) {
 
