@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CanvasJSreact from "./canvasjs.react.js";
+import CanvasJSreact from "./canvasjs.react";
+
 import axios from "axios"
 import GraphPartial from "../GraphPartial"
 var CanvasJS = CanvasJSreact.CanvasJS;
@@ -30,14 +31,10 @@ function Graph() {
         axisY: {
             title: "Moneys"
         },
-        data :[{
-            type: "spline",
-            name: props.name,
-            showInLegend: true,
-            // this part needs to be mapped out for each company then each data value
-            dataPoints: 
-              <GraphPartial key={data._id} item={data}/>  
-            }]
+        // this part needs to be mapped out for each company then each data value
+        data : [
+        <GraphPartial key={data._id} item={data}/>  
+        ]
         }
         return (
           <>

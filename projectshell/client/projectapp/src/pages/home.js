@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import Card from "../Components/Card";
 import List from "../Components/List";
+import Graph from "../Components/Graph";
 import HomePageHeader from "../Components/HomePageHeader"
 
 const Home = () => {
