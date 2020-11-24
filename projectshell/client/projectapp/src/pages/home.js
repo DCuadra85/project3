@@ -1,4 +1,5 @@
 import React from 'react';
+import Graph from "../Components/Graph"
 // import React from 'react';
 // import axios from "axios"
 // import Table from "../Components/Table";
@@ -43,7 +44,7 @@ function Home() {
           </tbody>
         </table>
       </div>
-      {/* <Graph /> */}
+      <Graph /> 
     </div >
     /* <ul>
       {data.Open.map((item, index) =>

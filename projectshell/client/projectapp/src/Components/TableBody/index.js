@@ -16,6 +16,7 @@ class TableBody extends Component {
         this.setState({
             data: data
         })
+        console.log(data);
     }
 
     componentDidMount() {
