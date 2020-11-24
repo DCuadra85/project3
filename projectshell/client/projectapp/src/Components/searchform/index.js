@@ -1,17 +1,24 @@
 import React from "react";
 import "./style.css";
 
-function searchform(props) {
+const SearchForm = (props) => {
+    const { value, onChange, onSubmit } = props;
     return (
-        <form className="search">
-            <div className="form-search">
-                <label htmlFor="language">Search Stock:</label>
-                <input
-                    value={props.search}
-                />
-            </div>
-        </form>
-    );
-}
+        <div>
+            <form onSubmit={onSubmit} className="ui form">
+                <div className="field">
+                <label>Stock Search: </label>
+                <wrapper>
+                <input type="text" placeholder="type"
+                value={value}
+                onChange={onChange}
+                /><button type="submit">
+                go
+                </button></wrapper>
+                </div>
+            </form>
+        </div>
+        )
+    }
 
-export default searchform;
+export default SearchForm;

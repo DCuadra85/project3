@@ -1,40 +1,63 @@
-import React, { useState, useEffect } from 'react';
-import axios from "axios"
-import Card from "../Components/Card";
-import List from "../Components/List";
+import React from 'react';
+// import React from 'react';
+// import axios from "axios"
+// import Table from "../Components/Table";
+import TableBody from "../Components/TableBody";
+// import List from "../Components/List";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const Home = () => {
-  const [data, setData] = useState({
-    Open: []
-  })
+// const Home = () => {
+//   const [data, setData] = useState({
+//     Open: []
+//   })
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        "http://api.marketstack.com/v1/tickers?access_key=b228c703a0f40145978c32c631031281&limit=2",
-      );
-      console.log(result.data.data)
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const result = await axios(
+//         "http://api.marketstack.com/v1/tickers?access_key=7e8a2f03ce451eead64e19f08a165245&limit=2",
+//       );
+//       console.log(result.data.data)
 
-      setData({ Open: result.data.data });
-    };
-    fetchData();
-  }, []);
-
+//       setData({ Open: result.data.data });
+//     };
+//     fetchData();
+//   }, []);
+function Home() {
   return (
-    <>
-    {/* <ul>
+    <div className="Home">
+      <div className="Container">
+        <table className="table mt-5">
+          <thead>
+            <tr>
+              <th >Symbol</th>
+              <th >Close</th>
+              <th >Date</th>
+              <th >Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableBody ticker="AAPL" />
+            <TableBody ticker="GOOG" />
+            <TableBody ticker="MSFT" />
+            <TableBody ticker="TSLA" />
+          </tbody>
+        </table>
+      </div>
+      {/* <Graph /> */}
+    </div >
+    /* <ul>
       {data.Open.map((item, index) =>
         <li key={index}>{JSON.stringify(item)}</li>
       )};
-    </ul> */}
+    </ul> */
+    /* <Table />
     <List>
       {data.Open.map(data => (
-        <Card key={data._id} item={data}/>  
+        <TableBody key={data._id} item={data}/>  
       ))}
-    </List>
-    </>
+    </List> */
   );
-  
 }
+
 
 export default Home;
