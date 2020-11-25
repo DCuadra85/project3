@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Navbar() {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <h1 className="p-2 mb-2 ml-3">
                     <a className="navbar-brand pl-3 px-1" href="/">Stock Watcher
                     </a>

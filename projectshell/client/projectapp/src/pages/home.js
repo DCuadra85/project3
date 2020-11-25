@@ -6,6 +6,7 @@ import Graph from "../Components/Graph"
 import TableBody from "../Components/TableBody";
 // import List from "../Components/List";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Jumbotron from '../Components/Jumbotron';
 
 // const Home = () => {
 //   const [data, setData] = useState({
